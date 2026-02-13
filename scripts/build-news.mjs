@@ -45,7 +45,7 @@ function createSlugFromFile(fileName) {
 
 function main() {
   const files = readdirSync(NEWS_DIR)
-    .filter((file) => file.toLowerCase().endsWith('.md'))
+    .filter((file) => /^\d{4}-\d{2}-\d{2}.*\.md$/i.test(file))
     .sort();
 
   const articles = files.map((fileName) => {
