@@ -1,0 +1,132 @@
+:host {
+  display: block;
+}
+
+.info-page {
+  background: #f9f9f9;
+}
+
+.shell-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(24px, 7.2vw, 104px);
+  padding-right: clamp(24px, 7.2vw, 104px);
+}
+
+h1 {
+  margin: clamp(18px, 2vw, 28px) 0 0;
+  text-align: center;
+  color: #4b835c;
+  font-family: 'Cardo', serif;
+  font-size: clamp(36px, 4.5vw, 52.32px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.downloads {
+  background: #f9f9f9;
+}
+
+.downloads-inner {
+  padding-top: clamp(40px, 7vw, 104px);
+  padding-bottom: clamp(40px, 7vw, 104px);
+}
+
+.download-row {
+  width: min(100%, 620px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.download-row + .download-row {
+  margin-top: 19px;
+}
+
+.download-row p {
+  margin: 0;
+  color: #4b835c;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(24px, 2.1vw, 29.6px);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.download-row a {
+  display: inline-block;
+  background: #4b835c;
+  color: #f9f9f9;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14.4px;
+  font-weight: 500;
+  line-height: 1.55;
+  border-radius: 5.28px;
+  padding: 9.6px 16px;
+}
+
+.wellbeing {
+  width: 100%;
+  background: #cfcabe;
+}
+
+.wellbeing-inner {
+  padding-top: clamp(40px, 7vw, 104px);
+  padding-bottom: clamp(40px, 7vw, 104px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 7.2vw, 104px);
+  align-items: stretch;
+}
+
+.wellbeing-copy h2 {
+  margin: 0;
+  color: #4b835c;
+  font-family: 'Cardo', serif;
+  font-size: clamp(31px, 2.8vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.wellbeing-copy hr {
+  margin: 14px 0 22px;
+  border: 0;
+  border-top: 1px solid #4b835c;
+}
+
+.wellbeing-copy p {
+  margin: 0 0 16px;
+  color: #4b835c;
+  font-family: 'Inter', sans-serif;
+  font-size: 16.8px;
+  font-weight: 400;
+  line-height: 26.04px;
+}
+
+.wellbeing-image {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.wellbeing-image img {
+  width: 100%;
+  max-width: 564px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 960px) {
+  .download-row {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .wellbeing-inner {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,21 @@
+<section class="news-article-page">
+  <div class="shell-inner" *ngIf="article() as item; else notFound">
+    <a class="back-link" routerLink="/actualites">← Retour aux actualités</a>
+    <p class="meta">{{ item.dateLabel }}</p>
+    <h1>{{ item.title }}</h1>
+
+    <div class="article-content" [innerHTML]="articleHtml()"></div>
+
+    <p class="source" *ngIf="item.sourceUrl">
+      Source :
+      <a [href]="item.sourceUrl" target="_blank" rel="noreferrer noopener">{{ item.sourceUrl }}</a>
+    </p>
+  </div>
+
+  <ng-template #notFound>
+    <div class="shell-inner not-found">
+      <h1>Actualité introuvable</h1>
+      <a class="back-link" routerLink="/actualites">Retour aux actualités</a>
+    </div>
+  </ng-template>
+</section>

@@ -1,12 +1,21 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NgClass } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [NgClass, RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('st-francois');
+  protected readonly isMenuOpen = signal(false);
+
+  protected closeMenu(): void {
+    this.isMenuOpen.set(false);
+  }
+
+  protected toggleMenu(): void {
+    this.isMenuOpen.update((value) => !value);
+  }
 }

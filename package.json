@@ -2,6 +2,10 @@
   "name": "st-francois",
   "version": "0.0.0",
   "scripts": {
+    "news:build": "node scripts/build-news.mjs",
+    "prestart": "npm run news:build",
+    "prebuild": "npm run news:build",
+    "pretest": "npm run news:build",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -29,6 +33,7 @@
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
     "@angular/router": "^21.1.0",
+    "marked": "^17.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
