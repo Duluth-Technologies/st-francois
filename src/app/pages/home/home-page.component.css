@@ -48,19 +48,6 @@
   padding: 13px 24px;
 }
 
-.slides {
-  background: #f9f9f9;
-  padding-bottom: clamp(56px, 7vw, 104px);
-}
-
-.slides iframe {
-  width: 100%;
-  min-height: 720px;
-  border: 0;
-  display: block;
-  background: #ffffff;
-}
-
 .welcome {
   background: #ffffff;
 }
@@ -187,10 +174,6 @@
 }
 
 @media (max-width: 900px) {
-  .slides iframe {
-    min-height: 420px;
-  }
-
   .welcome-inner {
     grid-template-columns: 1fr;
   }
