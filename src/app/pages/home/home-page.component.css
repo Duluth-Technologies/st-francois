@@ -36,18 +36,6 @@
   line-height: 1.45;
 }
 
-.donation {
-  margin-top: 28px;
-  display: inline-block;
-  text-decoration: none;
-  background: #4b835c;
-  color: #ffffff;
-  font-weight: 700;
-  line-height: 1;
-  border-radius: 2px;
-  padding: 13px 24px;
-}
-
 .welcome {
   background: #ffffff;
 }
