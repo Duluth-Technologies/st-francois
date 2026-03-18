@@ -6,11 +6,13 @@ import { SupportPageComponent } from './pages/support/support-page.component';
 import { InformationPageComponent } from './pages/information/information-page.component';
 import { ContactPageComponent } from './pages/contact/contact-page.component';
 import { LegalPageComponent } from './pages/legal/legal-page.component';
+import { TeamPageComponent } from './pages/team/team-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'actualites', component: NewsPageComponent },
   { path: 'actualites/:slug', component: NewsArticlePageComponent },
+  { path: 'equipe', component: TeamPageComponent },
   { path: 'soutenez-nous', component: SupportPageComponent },
   { path: 'informations-pratiques', component: InformationPageComponent },
   { path: 'contact', component: ContactPageComponent },

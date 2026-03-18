@@ -14,6 +14,7 @@
 
       <nav class="main-nav" [ngClass]="{ 'is-open': isMenuOpen() }" aria-label="Navigation">
         <a routerLink="/actualites" routerLinkActive="active" (click)="closeMenu()">Actualités</a>
+        <a routerLink="/equipe" routerLinkActive="active" (click)="closeMenu()">Equipe</a>
         <a routerLink="/soutenez-nous" routerLinkActive="active" (click)="closeMenu()">Soutenez-nous</a>
         <a routerLink="/informations-pratiques" routerLinkActive="active" (click)="closeMenu()">Informations pratiques</a>
         <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contactez-nous</a>
@@ -50,6 +51,7 @@
       <div class="footer-links">
         <h2>Pages</h2>
         <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Accueil</a>
+        <a routerLink="/equipe" routerLinkActive="active">Equipe</a>
         <a routerLink="/soutenez-nous" routerLinkActive="active">Soutenez-nous !!</a>
         <a routerLink="/contact" routerLinkActive="active">Contactez-nous</a>
         <a routerLink="/mentions-legales" routerLinkActive="active">Mentions légales</a>

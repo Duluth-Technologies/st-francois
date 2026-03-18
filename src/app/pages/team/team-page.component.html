@@ -1,0 +1,32 @@
+<section class="team-page">
+  <section class="team-hero">
+    <div class="shell-inner team-hero-inner">
+      <h1>Equipe Pedagogique</h1>
+      <p class="intro">
+        Des professeurs engagés, aux parcours complémentaires, au service d’un collège exigeant,
+        bienveillant et enraciné.
+      </p>
+    </div>
+  </section>
+
+  <section class="team-list">
+    <div class="shell-inner team-grid">
+      @for (member of teamMembers; track member.name) {
+        <article class="team-card">
+          <figure class="team-photo">
+            <img [src]="member.image" [alt]="member.imageAlt" />
+          </figure>
+
+          <div class="team-copy">
+            <p class="member-role">{{ member.title }}</p>
+            <h2>{{ member.name }}</h2>
+
+            @for (paragraph of member.bio; track paragraph) {
+              <p>{{ paragraph }}</p>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</section>
