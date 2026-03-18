@@ -35,10 +35,10 @@ h1 {
 .download-row {
   width: min(100%, 620px);
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 148px;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  column-gap: 40px;
 }
 
 .download-row + .download-row {
@@ -47,6 +47,7 @@ h1 {
 
 .download-row p {
   margin: 0;
+  text-align: left;
   color: #4b835c;
   font-family: 'Inter', sans-serif;
   font-size: clamp(24px, 2.1vw, 29.6px);
@@ -55,7 +56,9 @@ h1 {
 }
 
 .download-row a {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
   background: #4b835c;
   color: #f9f9f9;
   text-decoration: none;
@@ -121,8 +124,12 @@ h1 {
 
 @media (max-width: 960px) {
   .download-row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 12px;
+    text-align: center;
+  }
+
+  .download-row p {
     text-align: center;
   }
 
