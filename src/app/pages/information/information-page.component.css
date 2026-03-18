@@ -14,7 +14,7 @@
 }
 
 h1 {
-  margin: clamp(18px, 2vw, 28px) 0 0;
+  margin: clamp(18px, 2vw, 28px) 0 clamp(32px, 4vw, 56px);
   text-align: center;
   color: #4b835c;
   font-family: 'Cardo', serif;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .downloads-inner {
-  padding-top: clamp(40px, 7vw, 104px);
+  padding-top: clamp(40px, 6vw, 88px);
   padding-bottom: clamp(40px, 7vw, 104px);
 }
 
