@@ -10,6 +10,33 @@
         <p>Le collège Saint François d’Assise est un collège 100% libre : il ne reçoit aucune aide de l’État ni de la ville ! Il fonctionne uniquement grâce aux dons de bienfaiteurs, à l’aide bénévole des parents d’élèves et aux frais de scolarité.</p>
         <p>N’hésitez pas à nous aider en soutenant la scolarité de nos élèves ou en participant au financement des travaux d’aménagement de nos locaux.</p>
 
+        <div class="donation-video">
+          <video #donationVideo autoplay [muted]="isMuted" loop playsinline>
+            <source src="/media/video.mp4" type="video/mp4" />
+          </video>
+          <button
+            class="donation-video-toggle"
+            type="button"
+            (click)="toggleMuted()"
+            [attr.aria-label]="isMuted ? 'Activer le son de la vidéo' : 'Couper le son de la vidéo'"
+            [attr.aria-pressed]="!isMuted"
+          >
+            @if (isMuted) {
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 10h4l5-4v12l-5-4H5z" />
+                <path d="M17 9l4 6" />
+                <path d="M21 9l-4 6" />
+              </svg>
+            } @else {
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 10h4l5-4v12l-5-4H5z" />
+                <path d="M18 9a4 4 0 0 1 0 6" />
+                <path d="M20.5 6.5a7.5 7.5 0 0 1 0 11" />
+              </svg>
+            }
+          </button>
+        </div>
+
         <a
           class="donation-link"
           href="https://www.helloasso.com/associations/etablissement-saint-francois-d-assise-nice/formulaires/1"

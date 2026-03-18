@@ -46,6 +46,65 @@ h1 {
   line-height: 28px;
 }
 
+.donation-video {
+  position: relative;
+  width: 100%;
+  margin: 8px 0 14px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #102317;
+}
+
+.donation-video video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.donation-video-toggle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  background: rgba(10, 23, 13, 0.42);
+  color: #ffffff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.donation-video-toggle svg {
+  width: 36px;
+  height: 36px;
+  display: block;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: scale(1.18);
+  transform-origin: center;
+}
+
+.donation-video-toggle:hover,
+.donation-video-toggle:focus-visible {
+  background: rgba(75, 131, 92, 0.68);
+  border-color: #ffffff;
+  outline: none;
+  transform: translateY(-1px);
+}
+
 .donation-link {
   display: block;
   width: 100%;
@@ -84,5 +143,17 @@ h1 {
 
   .support-visual img {
     max-width: 420px;
+  }
+
+  .donation-video-toggle {
+    right: 12px;
+    bottom: 12px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .donation-video-toggle svg {
+    width: 30px;
+    height: 30px;
   }
 }

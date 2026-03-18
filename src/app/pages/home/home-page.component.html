@@ -1,8 +1,35 @@
 <section class="hero">
+  <div class="hero-media" aria-hidden="true">
+    <video #heroVideo autoplay [muted]="isMuted" loop playsinline>
+      <source src="/media/video.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="shell-inner hero-inner">
     <h1>Collège Saint François d’Assise</h1>
     <p>Un collège libre et indépendant au coeur de Nice</p>
   </div>
+  <button
+    class="hero-sound-toggle"
+    type="button"
+    (click)="toggleMuted()"
+    [attr.aria-label]="isMuted ? 'Activer le son de la vidéo' : 'Couper le son de la vidéo'"
+    [attr.aria-pressed]="!isMuted"
+  >
+    @if (isMuted) {
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 10h4l5-4v12l-5-4H5z" />
+        <path d="M17 9l4 6" />
+        <path d="M21 9l-4 6" />
+      </svg>
+    } @else {
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 10h4l5-4v12l-5-4H5z" />
+        <path d="M18 9a4 4 0 0 1 0 6" />
+        <path d="M20.5 6.5a7.5 7.5 0 0 1 0 11" />
+      </svg>
+    }
+  </button>
 </section>
 
 <section class="welcome">
