@@ -13,10 +13,10 @@
       </button>
 
       <nav class="main-nav" [ngClass]="{ 'is-open': isMenuOpen() }" aria-label="Navigation">
-        <a routerLink="/actualites" routerLinkActive="active" (click)="closeMenu()">Actualités</a>
-        <a routerLink="/equipe" routerLinkActive="active" (click)="closeMenu()">Equipe</a>
-        <a routerLink="/soutenez-nous" routerLinkActive="active" (click)="closeMenu()">Soutenez-nous</a>
         <a routerLink="/informations-pratiques" routerLinkActive="active" (click)="closeMenu()">Informations pratiques</a>
+        <a routerLink="/equipe" routerLinkActive="active" (click)="closeMenu()">Equipe</a>
+        <a routerLink="/actualites" routerLinkActive="active" (click)="closeMenu()">Actualités</a>
+        <a routerLink="/soutenez-nous" routerLinkActive="active" (click)="closeMenu()">Soutenez-nous</a>
         <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contactez-nous</a>
       </nav>
     </div>
