@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -8,27 +8,42 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
-  @ViewChild('heroVideo')
-  private readonly heroVideo?: ElementRef<HTMLVideoElement>;
+  @ViewChild('featureVideo')
+  private readonly featureVideo?: ElementRef<HTMLVideoElement>;
 
-  protected isMuted = true;
+  protected isFeatureVideoOpen = false;
 
-  protected toggleMuted(): void {
-    const video = this.heroVideo?.nativeElement;
-    if (!video) {
-      this.isMuted = !this.isMuted;
-      return;
-    }
+  protected openFeatureVideo(): void {
+    this.isFeatureVideoOpen = true;
 
-    const nextMuted = !this.isMuted;
-    video.muted = nextMuted;
-    video.defaultMuted = nextMuted;
+    requestAnimationFrame(() => {
+      const video = this.featureVideo?.nativeElement;
+      if (!video) {
+        return;
+      }
 
-    if (!nextMuted) {
+      video.currentTime = 0;
+      video.muted = false;
+      video.defaultMuted = false;
       video.volume = 1;
       void video.play();
+    });
+  }
+
+  protected closeFeatureVideo(): void {
+    const video = this.featureVideo?.nativeElement;
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
     }
 
-    this.isMuted = nextMuted;
+    this.isFeatureVideoOpen = false;
+  }
+
+  @HostListener('document:keydown.escape')
+  protected onEscapeKey(): void {
+    if (this.isFeatureVideoOpen) {
+      this.closeFeatureVideo();
+    }
   }
 }
