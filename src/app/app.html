@@ -66,3 +66,27 @@
     </p>
   </footer>
 </div>
+
+@if (isOpenDayNoticeVisible()) {
+  <dialog
+    #openDayDialog
+    class="open-day-dialog"
+    aria-label="Portes ouvertes du collège le 7 novembre 2026"
+    (cancel)="closeOpenDayNotice()"
+  >
+    <div class="open-day-dialog-actions">
+      <button
+        class="open-day-dialog-close"
+        type="button"
+        aria-label="Fermer l'annonce des portes ouvertes"
+        (click)="closeOpenDayNotice()"
+      >
+        &times;
+      </button>
+    </div>
+    <img
+      src="/media/portes-ouvertes-2026.jpg"
+      alt="Portes ouvertes du Collège Saint François d'Assise, samedi 7 novembre 2026 de 10 h à 12 h 30, 21 rue Smolett à Nice. Venez découvrir le projet pédagogique et rencontrer l'équipe."
+    />
+  </dialog>
+}
