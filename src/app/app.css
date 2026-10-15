@@ -32,19 +32,19 @@
   right: 8px;
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: #ffffff;
+  background: transparent;
   color: #1f2821;
-  font: 30px/1 Arial, sans-serif;
+  font: 24px/1 Arial, sans-serif;
   cursor: pointer;
 }
 
 .open-day-dialog-close:focus-visible {
-  outline: 3px solid #1f2821;
+  outline: 1px solid #1f2821;
   outline-offset: 2px;
 }
 
